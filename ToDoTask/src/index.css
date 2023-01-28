@@ -1,0 +1,16 @@
+body {
+  font-family: 'Inter', sans-serif;
+
+  margin: 0;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  background-color: #F5F9FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
