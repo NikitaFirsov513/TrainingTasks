@@ -21,7 +21,7 @@ function App() {
         <h1>Daily To Do List</h1>
         <FormContainer tasks={tasks} setTasks={setTasks} />
         <ListTasks tasks={tasks} />
-        <Footer />
+        <Footer col={tasks.length} setTasks={setTasks} />
       </div>
     </div>
   );

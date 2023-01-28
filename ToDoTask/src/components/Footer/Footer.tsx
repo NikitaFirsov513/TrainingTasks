@@ -1,14 +1,23 @@
 
+import { Dispatch, SetStateAction } from "react";
+import { ITask } from "../../App";
 
+interface IFooterProps {
+    col: number;
+    setTasks: Dispatch<SetStateAction<ITask[]>>;
+}
 
+export const Footer = ({ col, setTasks }: IFooterProps) => {
+    const clearAll = () => {
+        setTasks([]);
+    }
 
-export const Footer = () => {
     return (
         <div className="app__footer">
             <div className="app__footer-elem">
-                <p>3 item selected</p>
+                <p>{col} item selected</p>
             </div>
-            <div className="app__footer-elem">
+            <div onClick={e => clearAll()} className="app__footer-elem">
                 <p>Clear All</p>
             </div>
         </div>)
