@@ -87,7 +87,13 @@ input[type="submit"] {
   color: #ffffff;
 }
 
-.listTasks {}
+.app__list {
+  min-height: 333px;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
 .custom-checkbox {
   position: absolute;
@@ -125,9 +131,14 @@ label::before {
 }
 
 .app__element {
-  margin-top: 48px;
   margin-left: 20px;
+  cursor: pointer;
   display: flex;
+}
+
+.app__element:hover p {
+  color: #2D70FD;
+
 }
 
 .app__element p {
@@ -148,9 +159,39 @@ label::before {
 
 .done+p {
   text-decoration: line-through;
+  color: #8F98A8;
   /* Добавляем зачеркивание */
 }
 
+
+.app__footer {
+  border-top: 1px solid #EEEEEE;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.app__footer-elem {
+  cursor: pointer;
+}
+
+.app__footer-elem p {
+
+  font-family: 'Inter';
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 110%;
+  /* identical to box height, or 18px */
+
+  text-align: right;
+  letter-spacing: 0.01em;
+  font-feature-settings: 'liga' off;
+
+  color: #B1BACB;
+}
 
 /*
     font-family: 'Inter', sans-serif;
