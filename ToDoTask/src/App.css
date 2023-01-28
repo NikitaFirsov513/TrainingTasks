@@ -21,6 +21,7 @@ h1 {
   display: flex;
   justify-content: center;
 }
+
 .app__conteiner {
   width: 600px;
 }
@@ -67,6 +68,7 @@ input[type="text"] {
 
   color: #b1bacb;
 }
+
 input[type="submit"] {
   padding: 0;
   margin: 0 6px 0 0;
@@ -85,19 +87,20 @@ input[type="submit"] {
   color: #ffffff;
 }
 
-.listTasks {
-}
+.listTasks {}
 
 .custom-checkbox {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
-.custom-checkbox + label {
+
+.custom-checkbox+label {
   display: inline-flex;
   align-items: center;
   user-select: none;
 }
+
 label::before {
   content: "";
   display: inline-block;
@@ -122,12 +125,13 @@ label::before {
 }
 
 .app__element {
-    margin-top: 48px;
-    margin-left: 20px;
-    display: flex;
+  margin-top: 48px;
+  margin-left: 20px;
+  display: flex;
 }
+
 .app__element p {
-margin-left: 16px;
+  margin-left: 16px;
 
   font-family: "Inter";
   font-style: normal;
@@ -141,6 +145,12 @@ margin-left: 16px;
 
   color: #001747;
 }
+
+.done+p {
+  text-decoration: line-through;
+  /* Добавляем зачеркивание */
+}
+
 
 /*
     font-family: 'Inter', sans-serif;
