@@ -16,7 +16,6 @@ function App() {
   ]);
   return (
     <div className="app">
-
       <div className="app__conteiner">
         <h1>Daily To Do List</h1>
         <FormContainer tasks={tasks} setTasks={setTasks} />

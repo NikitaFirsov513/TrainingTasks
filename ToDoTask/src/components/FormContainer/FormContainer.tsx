@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ITask } from "../../App";
 import { Dispatch, SetStateAction } from "react";
+
 interface IFormContainerProps {
   tasks: ITask[];
   setTasks: Dispatch<SetStateAction<ITask[]>>;
@@ -9,8 +10,11 @@ interface IFormContainerProps {
 export const FormContainer = ({ tasks, setTasks }: IFormContainerProps) => {
   const [text, setText] = useState("");
   const Add = (e: React.FormEvent<HTMLFormElement>) => {
-    setTasks((old) => [...old, { text: text,isDone:false }]);
     e.preventDefault();
+
+    if (text == "") return;
+
+    setTasks((old) => [...old, { text: text, isDone: false }]);
   };
 
   return (
