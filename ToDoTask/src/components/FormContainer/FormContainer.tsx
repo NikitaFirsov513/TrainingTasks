@@ -1,24 +1,21 @@
 import { useState } from "react";
 import { ITask } from "../../App";
 import { Dispatch, SetStateAction } from "react";
+import { useAddOne } from "../../utils/useList";
 
-interface IFormContainerProps {
-  tasks: ITask[];
-  setTasks: Dispatch<SetStateAction<ITask[]>>;
-}
-
-export const FormContainer = ({ tasks, setTasks }: IFormContainerProps) => {
+export const FormContainer = () => {
   const [text, setText] = useState("");
-  const Add = (e: React.FormEvent<HTMLFormElement>) => {
+
+  const addOne = useAddOne();
+
+  const add = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     if (text == "") return;
-
-    setTasks((old) => [...old, { text: text, isDone: false }]);
+    addOne(text);
   };
 
   return (
-    <form action="" onSubmit={(e) => Add(e)}>
+    <form action="" onSubmit={(e) => add(e)}>
       <input
         value={text}
         onChange={(e) => setText(e.target.value)}

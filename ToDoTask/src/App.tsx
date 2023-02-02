@@ -11,16 +11,13 @@ export interface ITask {
 }
 
 function App() {
-  const [tasks, setTasks] = useState<ITask[]>([
-    { text: "Задача 1", isDone: true },
-  ]);
   return (
     <div className="app">
       <div className="app__conteiner">
         <h1>Daily To Do List</h1>
-        <FormContainer tasks={tasks} setTasks={setTasks} />
-        <ListTasks tasks={tasks} />
-        <Footer col={tasks.length} setTasks={setTasks} />
+        <FormContainer />
+        <ListTasks />
+        <Footer />
       </div>
     </div>
   );
