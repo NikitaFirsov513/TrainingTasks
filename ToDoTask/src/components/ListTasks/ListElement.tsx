@@ -35,7 +35,7 @@ export const ListElement = ({ task, id }: IListElementProps) => {
         defaultChecked={task.isDone}
       />
       <label ref={lableRef} htmlFor="happy"></label>
-      <p>{task.text}</p>
+      <p >{task.text}</p>
     </div>
   );
 };
