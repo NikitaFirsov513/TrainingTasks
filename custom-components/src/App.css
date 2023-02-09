@@ -1,5 +1,40 @@
 .app {
   min-height: 100vh;
   min-width: 100vw;
-  
+
+}
+
+.custom-shape-divider-top-1675950196 {
+  transition: all 2s;
+  position: sticky;
+  z-index: -2;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1675950196 svg {
+  transition: all 0.5s;
+
+  position: relative;
+  display: block;
+  width: calc(278% + 1.3px);
+  min-height: 100vh;
+  transform: rotateY(180deg);
+  background: #2F4B97;
+}
+
+.custom-shape-divider-top-1675950196 .shape-fill {
+  fill: #FFFFFF;
+}
+.custom-shape-divider-top-1675950196--black svg{
+
+  width: calc(200% + 1.3px);
+
 }
