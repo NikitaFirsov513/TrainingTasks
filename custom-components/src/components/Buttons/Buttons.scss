@@ -1,0 +1,61 @@
+.buttons {
+    padding: 50px 50px;
+    width: 380px;
+
+    background-color: var(--second-bg-color);
+    border-radius: 32px;
+
+    &__list {
+        margin-top: 25px;
+        display: flex;
+        gap: 12px;
+
+        justify-content: center;
+        & button {
+            cursor: pointer;
+
+            padding: 12px 24px;
+            outline: none;
+            /* Primary */
+
+            border: 1px solid var(--component-color);
+            border-radius: 10px;
+            background-color: var(--component-color);
+
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            /* identical to box height, or 125% */
+
+            letter-spacing: -0.02em;
+
+            color: #ffffff;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 24px;
+            gap: 10px;
+        }
+        & button:hover {
+            background-color: var(--component-hover-color);
+        }
+        & button:active {
+            background-color: var(--component-color);
+        }
+
+        & button[disabled] {
+            cursor:not-allowed;
+            background-color: var(--component-disabled-color);
+            border: 1px solid var(--component-disabled-color);
+        }
+
+        & button[disabled]:hover {
+            background-color: var(--component-disabled-color);
+            border: 1px solid var(--component-disabled-color);
+        }
+    }
+}
