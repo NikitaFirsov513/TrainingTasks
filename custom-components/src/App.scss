@@ -1,22 +1,21 @@
 .app {
-
-  background-color: var(--bg-color);display: flex;
-  padding: 145px 0 0 0 ;
+  background-color: var(--bg-color);
+  display: flex;
+  padding: 145px 0 0 0;
   justify-content: center;
 }
 
 .app__container {
-
   width: calc(100vw - 220px);
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0px 0px;
-  max-height: 1025px;
+  justify-content: center;
+  gap: 130px;
+  &-line {
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+  }
 }
-
 
 .app__theme-slider {
   position: absolute;
@@ -24,15 +23,13 @@
   top: 40px;
 }
 
-
 h1 {
-  font-family: 'Plus Jakarta Sans';
+  font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
   letter-spacing: -0.02em;
-
 
   color: var(--main-text-color);
   margin: 0;

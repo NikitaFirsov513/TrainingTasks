@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 //import "normalize.css";
 import { ThemeSlider } from "./components/ThemeSlider/ThemeSlider";
 import { Buttons } from "./components/Buttons/Buttons";
@@ -26,15 +26,22 @@ function App() {
       </div>
       <div className="app__container">
 
-        <Buttons />
-        <Buttons />
-        <Buttons />
-        <Buttons />
-        <Buttons />
+        <div className="app__container-line">
+          <Buttons />
+          <Buttons />
+          <Buttons />
+        </div>
 
-
-
-
+        <div className="app__container-line">
+          <Buttons />
+          <Buttons />
+          <Buttons />
+        </div>
+        <div className="app__container-line">
+          <Buttons />
+          <Buttons />
+          <Buttons />
+        </div>
 
       </div>
     </div>
