@@ -25,24 +25,15 @@ function App() {
         <ThemeSlider />
       </div>
       <div className="app__container">
-
         <div className="app__container-line">
-          <Buttons />
-          <Buttons />
-          <Buttons />
-        </div>
-
-        <div className="app__container-line">
-          <Buttons />
-          <Buttons />
           <Buttons />
         </div>
         <div className="app__container-line">
           <Buttons />
-          <Buttons />
+        </div>
+        <div className="app__container-line">
           <Buttons />
         </div>
-
       </div>
     </div>
   );
