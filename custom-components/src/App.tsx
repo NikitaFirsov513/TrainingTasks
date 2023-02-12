@@ -2,6 +2,7 @@ import "./App.scss";
 //import "normalize.css";
 import { ThemeSlider } from "./components/ThemeSlider/ThemeSlider";
 import { Buttons } from "./components/Buttons/Buttons";
+import { Inputs } from "./components/Inputs/Inputs";
 
 function App() {
   const theme = window.localStorage.getItem("theme");
@@ -29,8 +30,7 @@ function App() {
           <Buttons />
         </div>
         <div className="app__container-line">
-          <Buttons />
-        </div>
+          <Inputs />        </div>
         <div className="app__container-line">
           <Buttons />
         </div>
