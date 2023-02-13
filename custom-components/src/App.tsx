@@ -3,6 +3,7 @@ import "./App.scss";
 import { ThemeSlider } from "./components/ThemeSlider/ThemeSlider";
 import { Buttons } from "./components/Buttons/Buttons";
 import { Inputs } from "./components/Inputs/Inputs";
+import { Dropdowns } from "./components/Dropdowns/Dropdowns";
 
 function App() {
   const theme = window.localStorage.getItem("theme");
@@ -27,7 +28,7 @@ function App() {
       </div>
       <div className="app__container">
         <div className="app__container-line">
-          <Buttons />
+          <Buttons /> <Dropdowns />
         </div>
         <div className="app__container-line">
           <Inputs />        </div>
