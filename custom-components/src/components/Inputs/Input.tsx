@@ -1,11 +1,15 @@
 // isErr errMesssage isActive
 
+import { Dispatch, useRef } from "react";
+
 type InputTypeProps = {
   isRequired: boolean;
   isErr: boolean;
   errMesssage?: string;
   isActive: boolean;
   placeholder?: string;
+  val?: string;
+  setVal: Dispatch<string>
 };
 
 export const Input = ({
@@ -14,7 +18,31 @@ export const Input = ({
   errMesssage,
   isActive,
   placeholder,
+  val,
+  setVal
 }: InputTypeProps) => {
+
+
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+
+  const handleChange = () => {
+
+    if (inputRef == null)
+      return
+    if (inputRef.current?.value === undefined)
+      return
+    if (setVal === undefined)
+      return
+    setVal(inputRef.current?.value);
+
+
+  }
+
+
+
+
+
   return (
     <div className="inputs__container ">
       <label htmlFor="">
@@ -25,7 +53,7 @@ export const Input = ({
           <span className="inputs__not-required">(Not Required)</span>
         )}
       </label>
-      <div className={"inputs__input " + (isErr ?"inputs__input--err":"")}>
+      <div className={"inputs__input " + (isErr ? "inputs__input--err" : "")}>
         {isErr ? (
           <svg
             width="18"
@@ -43,10 +71,11 @@ export const Input = ({
         ) : (
           ""
         )}
+
         {isActive ? (
-          <input type="text" placeholder={placeholder} />
+          <input ref={inputRef} type="text" value={val} onChange={elem => { handleChange() }} placeholder={placeholder} />
         ) : (
-          <input type="text" disabled placeholder={placeholder} />
+          <input ref={inputRef} type="text" value={val} disabled placeholder={placeholder} />
         )}
         {isErr ? <p>{errMesssage}</p> : ""}
       </div>
