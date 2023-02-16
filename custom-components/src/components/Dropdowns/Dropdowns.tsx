@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Dropdown } from './Dropdown';
 import './Dropdowns.scss'
 //
 
@@ -17,19 +18,53 @@ export const Dropdowns = () => {
 
 
     const handleClick = (id: string) => {
+        console.log('handleClick')
         document.getElementById(id)?.classList.toggle('dropdown__list--active')
     }
 
 
-    const changeSelect = (name: string) => {
+    const changeSelect = (name: string, id: string) => {
+        console.log('changeSelect')
         setSelect(name);
+        handleClick(id);
     }
 
     return (
-        <div className="dropdowns">
+        <div className="dropdowns ">
             <h1>Dropdown</h1>
-            <div onMouseLeave={e => handleClick('one')}  onClick={e => handleClick('one')} className='dropdown'>
-                <div className="dropdown__container">
+            <Dropdown
+                id='select-one'
+                label='label'
+                isRequired={false}
+                list={list}
+                activeElement={select}
+                setActiveElement={setSelect}
+                isError={false}
+                errorMassage={'errorMassage'} />
+            <Dropdown
+                id='select-two'
+                label='label'
+                isRequired={true}
+                list={list}
+                activeElement={select}
+                setActiveElement={setSelect}
+                isError={false}
+                errorMassage={'errorMassage'} />
+            <Dropdown
+                id='select-three'
+                label='label'
+                isRequired={false}
+                list={list}
+                activeElement={select}
+                setActiveElement={setSelect}
+                isError={true}
+                errorMassage={'error-massage'} />
+        </div>)
+}
+
+/*
+<div className='dropdown dropdown--err'>
+                <div onClick={e => handleClick('one')} className="dropdown__container">
                     <label htmlFor="">
                         Label
                         <span className="dropdown__required">*</span>
@@ -46,14 +81,24 @@ export const Dropdowns = () => {
                 </div>
                 <div id='one' className="dropdown__list">
                     {list.map((elem, index) => (
-                        <div onClick={e => { changeSelect(elem) }} key={elem + index} className="dropdown__list-element ">
+                        <div onClick={e => { changeSelect(elem, 'one') }} key={elem + index} className="dropdown__list-element ">
                             {elem}
                         </div>))}
                 </div>
+                <div className='dropdown__err'>
+
+                    Error
+
+                </div>
             </div>
 
-            
 
 
-        </div>)
-} 
+
+
+
+
+
+
+
+*/
