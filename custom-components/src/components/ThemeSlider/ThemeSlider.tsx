@@ -1,4 +1,4 @@
-import './ThemeSlider.css'
+import './ThemeSlider.scss'
 
 
 export const ThemeSlider = () => {
