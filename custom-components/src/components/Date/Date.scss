@@ -1,0 +1,11 @@
+.date-wrapper {
+    padding: 50px 50px;
+    width: 380px;
+
+    background-color: var(--second-bg-color);
+    border-radius: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}

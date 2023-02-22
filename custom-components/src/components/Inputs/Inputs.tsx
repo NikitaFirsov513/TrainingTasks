@@ -16,8 +16,8 @@ export const Inputs = () => {
       <Input val={val} setVal={setVal} isRequired={false} isErr={false} isActive={true} />
       <Input val={val} setVal={setVal} isRequired={true} isErr={false} isActive={true} />
       <Input val={val} setVal={setVal} isRequired={false} isErr={false} isActive={false} />
-      <Input val={val} 
-      setVal={setVal}
+      <Input val={val}
+        setVal={setVal}
         isRequired={true}
         isErr={true}
         isActive={true}

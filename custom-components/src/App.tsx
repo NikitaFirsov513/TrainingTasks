@@ -4,6 +4,7 @@ import { ThemeSlider } from "./components/ThemeSlider/ThemeSlider";
 import { Buttons } from "./components/Buttons/Buttons";
 import { Inputs } from "./components/Inputs/Inputs";
 import { Dropdowns } from "./components/Dropdowns/Dropdowns";
+import { DatePicker } from "./components/Date/Date";
 
 function App() {
   const theme = window.localStorage.getItem("theme");
@@ -33,7 +34,7 @@ function App() {
         <div className="app__container-line">
           <Inputs />        </div>
         <div className="app__container-line">
-          <Buttons />
+          <DatePicker />
         </div>
       </div>
     </div>
